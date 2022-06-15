@@ -27,12 +27,6 @@ if (drivingLicense == true) {
     };
 
 
-
-
-
-
-
-
 /// Soal - 02
 /// Buatlah sebuah kondisi yang akan melakukan konversi suhu dari celcius ke variable yang dituju (kelvin, fahrenheit, dan celsius)
 /// - kondisi dibuat menggunakan switch case
