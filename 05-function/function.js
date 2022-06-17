@@ -14,8 +14,19 @@
 /// - (Number) total pajak yang harus kamu bayarkan
 
 /// EDIT HERE
-function taxCalc(....) { ... }
+function taxCalc(salary) { 
+    if(salary < 5000000){
+        return salary * (0/100);
+    } else if(salary >= 5000000 && salary < 10000000){
+        return salary * (5/100);
+    } else if(salary >= 10000000 && salary < 20000000){
+        return salary * (10/100);
+    } else {
+        return salary * (20/100);
+    }
+ }
 
+ console.log(taxCalc(10000000))
 
 /// Soal - 02
 /// BMI merupakan sebuah perhitungan yang mana dapat menunjukan apakah seseorang itu masuk dalam kategori obesitas atau tidak. Kamu diminta untuk membuat sebuah fungsi untuk menghitung BMI seseorang serta dapat menentukan apakah orang tersebut obesitas atau tidak.
@@ -36,8 +47,22 @@ function taxCalc(....) { ... }
 ///   (weight/(height^2)) * 10000
 
 /// EDIT HERE
-function checkBMI(....) { .... }
+function jumlahBmi(height, weight) { 
+    let $BMI = (weight/(height*height)) * 10000;
+    if($BMI < 18.5){
+        return 'under weight';
+    } else if (18.5 < $BMI < 24.9) {
+        return 'normal';
+    } else if (25 < $BMI < 29.9) {
+        return 'over weight';
+    } else if (30 < $BMI < 34.9) {
+        return 'obese';
+    } else {
+        return 'extremely obese';
+    }
+ }
 
+ console.log(jumlahBmi(174, 64))
 
 /// Soal - 03
 /// Buatlah sebuah fungsi yang akan merubah huruf pertama disetiap kata menjadi huruf besar
@@ -49,7 +74,10 @@ function checkBMI(....) { .... }
 /// - (String) kalimat yang sudah kita ubah huruf pertamanya menjadi huruf besar
 
 /// EDIT HERE
-function convToUpperCase(....) { .... }
+function convToUpperCase(sentence) { 
+    return sentence.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+ }
+console.log(convToUpperCase("hello world"))
 
 
 /// Soal - 04

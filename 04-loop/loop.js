@@ -37,6 +37,7 @@ console.info(data.prima());
 let primeCounter = 0;
 let fiftiethPrime;
 
+
 /// EDIT HERE
 // while (....) {}
 
