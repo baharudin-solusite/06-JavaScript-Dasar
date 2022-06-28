@@ -95,4 +95,4 @@ console.log(convToUpperCase("hello world"))
 /// (String) huruf yang pertama kali tidak ada kembarannya
 
 /// EDIT HERE
-function firstNonRepeatedChar(....) { .... }
+// function firstNonRepeatedChar(....) { .... }

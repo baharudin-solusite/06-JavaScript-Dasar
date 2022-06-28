@@ -40,7 +40,6 @@ function printFirstName(name) {
 
 console.log(printFirstName("Mariah Carey"));//Mariah
 
-// JAWABAN SOAL NOMER 1
-
-//---- yang ditampilkan pada consolo tersebut (Mariah)
-//---- karena dalam variabel nama tidak memiliki sebuah Parameter nilai didalamnya
+// JAWABAN SOAL NOMER 2
+// - Mariah
+// - karena Parameter split memisahkan string menjadi beberapa bagian jadi bila parameter dipanggil yang seharusnya Mariah Carey menjadi Mariah 
