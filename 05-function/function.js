@@ -14,19 +14,19 @@
 /// - (Number) total pajak yang harus kamu bayarkan
 
 /// EDIT HERE
-function taxCalc(salary) { 
-    if(salary < 5000000){
-        return salary * (0/100);
-    } else if(salary >= 5000000 && salary < 10000000){
-        return salary * (5/100);
-    } else if(salary >= 10000000 && salary < 20000000){
-        return salary * (10/100);
+function taxCalc(salary) {
+    if (salary < 5000000) {
+        return salary * (0 / 100);
+    } else if (salary >= 5000000 && salary < 10000000) {
+        return salary * (5 / 100);
+    } else if (salary >= 10000000 && salary < 20000000) {
+        return salary * (10 / 100);
     } else {
-        return salary * (20/100);
+        return salary * (20 / 100);
     }
- }
+}
 
- console.log(taxCalc(10000000))
+console.log(taxCalc(10000000))
 
 /// Soal - 02
 /// BMI merupakan sebuah perhitungan yang mana dapat menunjukan apakah seseorang itu masuk dalam kategori obesitas atau tidak. Kamu diminta untuk membuat sebuah fungsi untuk menghitung BMI seseorang serta dapat menentukan apakah orang tersebut obesitas atau tidak.
@@ -47,9 +47,9 @@ function taxCalc(salary) {
 ///   (weight/(height^2)) * 10000
 
 /// EDIT HERE
-function jumlahBmi(height, weight) { 
-    let $BMI = (weight/(height*height)) * 10000;
-    if($BMI < 18.5){
+function jumlahBmi(height, weight) {
+    let $BMI = (weight / (height * height)) * 10000;
+    if ($BMI < 18.5) {
         return 'under weight';
     } else if (18.5 < $BMI < 24.9) {
         return 'normal';
@@ -60,9 +60,9 @@ function jumlahBmi(height, weight) {
     } else {
         return 'extremely obese';
     }
- }
+}
 
- console.log(jumlahBmi(174, 64))
+console.log(jumlahBmi(174, 64))
 
 /// Soal - 03
 /// Buatlah sebuah fungsi yang akan merubah huruf pertama disetiap kata menjadi huruf besar
@@ -74,9 +74,9 @@ function jumlahBmi(height, weight) {
 /// - (String) kalimat yang sudah kita ubah huruf pertamanya menjadi huruf besar
 
 /// EDIT HERE
-function convToUpperCase(sentence) { 
+function convToUpperCase(sentence) {
     return sentence.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
- }
+}
 console.log(convToUpperCase("hello world"))
 
 
@@ -96,3 +96,34 @@ console.log(convToUpperCase("hello world"))
 
 /// EDIT HERE
 // function firstNonRepeatedChar(....) { .... }
+function firstNonRepeatedChar(word) {
+    let huruf;
+
+    for (let index = 0; index < word.length; index++) {
+        huruf = word[index];
+        if (huruf == " ") {
+            return "kata tidak boleh dipisah";
+        }
+
+    }
+
+    for (let index = 0; index < word.length; index++) {
+        huruf = word[index];
+        let cek = false;
+        for (let j = 0; j < word.length; j++) {
+            if (huruf == word[j] && j != index) {
+                cek = true;
+                break;
+            }
+        }
+        if (cek == false) {
+            return huruf;
+            break;
+        }
+    }
+    return "";
+}
+
+console.log(firstNonRepeatedChar("hello world"));
+console.log(firstNonRepeatedChar("alloha"));
+console.log(firstNonRepeatedChar("wooohoowh"));
